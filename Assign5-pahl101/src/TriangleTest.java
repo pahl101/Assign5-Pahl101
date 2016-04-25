@@ -12,7 +12,7 @@ public class TriangleTest {
 
 
 	Triangle t;
-	Triangle t2;
+	//Triangle t2;
 
 	@Before
 	public void setUp() throws Exception {
@@ -20,7 +20,7 @@ public class TriangleTest {
 		b=4;
 		c=5;
 		t = new Triangle(a,b,c);
-		t2 = new Triangle(a,b,c);
+		//t2 = new Triangle(a,b,c);
 
 		
 
@@ -34,16 +34,13 @@ public class TriangleTest {
 	}
 
 	@Test
-	public void testValidateInput() {
+	public void testValidateInput() throws Exception{
 		assertTrue(t.validateInput(a, b, c));
 		assertTrue(t.validateInput(a, c, b));
 		assertTrue(t.validateInput(b, a, c));
 		assertTrue(t.validateInput(b, c, a));
 		assertTrue(t.validateInput(c, a, b));
 		assertTrue(t.validateInput(c, b, a));
-		a = 0;
-		b = 0;
-		c = 0;
 	}
 
 	
@@ -51,7 +48,9 @@ public class TriangleTest {
 			a=0;
 			b=0;
 			c=0;
-		    t2.validateInput(a,b,c);
+			Triangle t2;
+			t2 = new Triangle(a,b,c);
+		    t2.validateInput(0,0,0);
 		    }
 
 	

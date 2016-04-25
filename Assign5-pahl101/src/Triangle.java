@@ -24,10 +24,6 @@ public class Triangle {
     
  
     Triangle(double sideA, double sideB, double sideC) throws Exception {
-        
-        if (!validateInput(sideA, sideB, sideC)) {
-            throw new Exception("Invalid Inputs");
-        }
 
         this.sideA = sideA;
         this.sideB = sideB;
@@ -39,12 +35,15 @@ public class Triangle {
     * @return true if equation below is satisfied and false if not.
     * @throws to ensure that there is a valid input
     */
-    public boolean validateInput(double sideA, double sideB, double sideC) { //there was a bug here (code missing information)
+    public boolean validateInput(double sideA, double sideB, double sideC) throws Exception { //there was a bug here (code missing information)
        if( sideA < sideB + sideC || sideB < sideA + sideC ||  sideC < sideA + sideB ){
            return true;
        }
        
-       else return false;
+       else {
+    	   throw new Exception("Invalid Inputs");
+  
+       }
     }
    
     /*
