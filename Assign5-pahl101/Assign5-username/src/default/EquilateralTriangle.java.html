@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../../../.resources/report.css" type="text/css"/><link rel="shortcut icon" href="../../../.resources/report.gif" type="image/gif"/><title>EquilateralTriangle.java</title><link rel="stylesheet" href="../../../.resources/prettify.css" type="text/css"/><script type="text/javascript" src="../../../.resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../../../.sessions.html" class="el_session">Sessions</a></span><a href="../../../index.html" class="el_report">TriangleTest (Apr 24, 2016 7:23:49 PM)</a> &gt; <a href="../../index.html" class="el_group">Assign5-username</a> &gt; <a href="../index.html" class="el_bundle">src</a> &gt; <a href="index.source.html" class="el_package">default</a> &gt; <span class="el_source">EquilateralTriangle.java</span></div><h1>EquilateralTriangle.java</h1><pre class="source lang-java linenums">/**
+ * SE320- Individual Assignment 5
+ * 
+ * Represents a Equilateral Triangle
+ * @author Dr. Donyina
+ * @author Madison Pahl
+ * @version 4/18/16
+ * 
+ * This class extends the regular triangle class, with all of its functionality, and then changes
+ * the area equation to be specific for an equilateral triangle and for  a valid input
+ */
+public class EquilateralTriangle extends Triangle {
+ 
+    EquilateralTriangle(double length)
+            throws Exception {
+<span class="nc" id="L16">        super(length, length, length);</span>
+<span class="nc" id="L17">    }</span>
+
+   /*
+    * (non-Javadoc)
+    * @see Triangle#validateInput(double, double, double)
+    * @param takes in sideA sideB and sideC to ensure they are valid for an equilateral triangle.
+    * @return true or false depending if the statement is correct or not.
+    * @throws exception to ensure that there is a valid input
+    */
+    public boolean validateInput(double sideA, double sideB, double sideC) {
+<span class="nc bnc" id="L27" title="All 6 branches missed.">    	if (sideA == sideB &amp;&amp; sideA == sideC &amp;&amp; sideB == sideC){ //think there was code bug here (missing info)</span>
+<span class="nc" id="L28">    		return true;</span>
+    	}
+
+<span class="nc" id="L31">    	else return false;</span>
+    }
+
+   /*
+    * (non-Javadoc)
+    * @see Triangle#getArea()
+    * @param does not take in any parameters, just uses the sides collected through the getSide functions
+    * @return returns a double of the area of the equilateral triangle.
+    */
+    public double getArea() {
+<span class="nc" id="L41">        return (Math.sqrt(3)/4) * sideA * sideA;</span>
+    }
+
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.eclemma.org/jacoco">JaCoCo</a> 0.7.6.201602180812</span>TriangleTest (Apr 24, 2016 7:23:49 PM)</div></body></html>

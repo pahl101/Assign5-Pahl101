@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../../../.resources/report.css" type="text/css"/><link rel="shortcut icon" href="../../../.resources/report.gif" type="image/gif"/><title>RightAngledTriangle.java</title><link rel="stylesheet" href="../../../.resources/prettify.css" type="text/css"/><script type="text/javascript" src="../../../.resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../../../.sessions.html" class="el_session">Sessions</a></span><a href="../../../index.html" class="el_report">TriangleTest (Apr 24, 2016 7:23:49 PM)</a> &gt; <a href="../../index.html" class="el_group">Assign5-username</a> &gt; <a href="../index.html" class="el_bundle">src</a> &gt; <a href="index.source.html" class="el_package">default</a> &gt; <span class="el_source">RightAngledTriangle.java</span></div><h1>RightAngledTriangle.java</h1><pre class="source lang-java linenums">/**
+ * SE320- Individual Assignment 5
+ * 
+ * Represents a Right Angled Triangle
+ * @author Dr. Donyina
+ * @author Madison Pahl
+ * @version 4/18/16
+ * 
+ * This class extends all the functionality from a regular triangle, but changes the formula to get the
+ * area and to make sure there is a valid input.
+ */
+public class RightAngledTriangle extends Triangle {
+    
+    RightAngledTriangle(double width, double height, double hypotenuse)
+            throws Exception {
+<span class="nc" id="L16">        super(width, height, hypotenuse);</span>
+<span class="nc" id="L17">    }</span>
+    
+    /*
+     * (non-Javadoc)
+     * @see Triangle#validateInput(double, double, double)
+     *  @param taking in the sides of a triangle. sideA, sideB, and sideC
+     * @return returns a boolean to whether or not the input is valid based on the below equations
+     * @throws an exception to ensure that there was a valid input of sides
+     */
+    public boolean validateInput(double sideA, double sideB, double sideC) {
+        
+    		
+<span class="nc bnc" id="L29" title="All 2 branches missed.">            if((sideC * sideC) == ((sideA * sideA) + (sideB * sideB))){ //may have been bug here</span>
+<span class="nc" id="L30">                return true; //forgot to add comments as I edited the code (but this needed the correct formula)</span>
+            }
+
+<span class="nc" id="L33">            else return false;</span>
+    }
+
+  /*
+   * (non-Javadoc)
+   * @see Triangle#getArea()
+   * @param no input parameters. Uses sides gain from getSide methods.
+   * @return returns a double, which is the area of the right angled triangle.
+   */
+    public double getArea() {
+<span class="nc" id="L43">        return ((sideA * sideB) / 2);</span>
+    }
+
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.eclemma.org/jacoco">JaCoCo</a> 0.7.6.201602180812</span>TriangleTest (Apr 24, 2016 7:23:49 PM)</div></body></html>
